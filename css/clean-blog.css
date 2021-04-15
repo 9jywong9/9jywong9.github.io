@@ -3,11 +3,19 @@
  * Copyright 2013-2020 Start Bootstrap
  * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-clean-blog/blob/master/LICENSE)
  */
+@font-face {
+  font-family: Hack;
+  src: url("./Hack-3.003/build-subsets.sh");
+  src: url("./Hack-3.003/build-ttf.sh");
+  src: url("./Hack-3.003/build-woff.sh");
+  src: url("./Hack-3.003/build-woff2.sh");
+  font-weight: normal;
+  font-style: normal;
+}
 
 body {
-  font-size: 20px;
   color: #212529;
-  font-family: 'Lora', 'Times New Roman', serif;
+  font-family: 'Hack', monospace;
 }
 
 p {
@@ -25,8 +33,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 800;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family:'Hack';
 }
 
 a {
@@ -91,7 +98,7 @@ img::-moz-selection {
   position: absolute;
   border-bottom: 1px solid #e9ecef;
   background-color: white;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Hack',monospace;
 }
 
 #mainNav .navbar-brand {
@@ -100,18 +107,16 @@ img::-moz-selection {
 }
 
 #mainNav .navbar-toggler {
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 800;
   padding: 13px;
-  text-transform: uppercase;
   color: #343a40;
 }
 
 #mainNav .navbar-nav > li.nav-item > a {
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 800;
   letter-spacing: 1px;
-  text-transform: uppercase;
 }
 
 @media only screen and (min-width: 992px) {
@@ -170,21 +175,21 @@ img::-moz-selection {
 }
 
 header.masthead {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   background: no-repeat center center;
-  background-color: #868e96;
+  background-color: #1f2020;
   background-attachment: scroll;
-  position: relative;
+  height: 300px;
   background-size: cover;
+  border-bottom: 0.5px solid gray;
 }
 
 header.masthead .overlay {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
+  height: 80%;
   width: 100%;
-  background-color: #212529;
   opacity: 0.5;
 }
 
@@ -193,6 +198,7 @@ header.masthead .post-heading,
 header.masthead .site-heading {
   padding: 200px 0 150px;
   color: white;
+  font-family:'Hack';
 }
 
 @media only screen and (min-width: 768px) {
@@ -203,9 +209,14 @@ header.masthead .site-heading {
   }
 }
 
+.site-heading img {
+  width: 200px;
+  vertical-align:bottom;
+  position: center;
+}
 header.masthead .page-heading,
 header.masthead .site-heading {
-  text-align: center;
+  text-align:center;
 }
 
 header.masthead .page-heading h1,
@@ -227,7 +238,7 @@ header.masthead .site-heading .subheading {
 @media only screen and (min-width: 768px) {
   header.masthead .page-heading h1,
   header.masthead .site-heading h1 {
-    font-size: 80px;
+    font-size: 30px;
   }
 }
 
@@ -269,30 +280,30 @@ header.masthead .post-heading .meta a {
 }
 
 .post-preview > a {
-  color: #212529;
+  color: #149414;;
 }
 
 .post-preview > a:focus, .post-preview > a:hover {
   text-decoration: none;
-  color: #0085A1;
+  color: #0e6b0e;
 }
 
 .post-preview > a > .post-title {
-  font-size: 30px;
+  font-size: 20px;
   margin-top: 30px;
   margin-bottom: 10px;
 }
 
-.post-preview > a > .post-subtitle {
-  font-weight: 300;
+.post-subtitle {
   margin: 0 0 10px;
+  font-size: 12px;
+  color: #149414;
 }
 
 .post-preview > .post-meta {
-  font-size: 18px;
-  font-style: italic;
+  font-size: 12px;
   margin-top: 0;
-  color: #868e96;
+  color: #159c09;
 }
 
 .post-preview > .post-meta > a {
@@ -300,14 +311,9 @@ header.masthead .post-heading .meta a {
   color: #212529;
 }
 
-.post-preview > .post-meta > a:focus, .post-preview > .post-meta > a:hover {
-  text-decoration: underline;
-  color: #0085A1;
-}
-
 @media only screen and (min-width: 768px) {
   .post-preview > a > .post-title {
-    font-size: 36px;
+    font-size: 20px;
   }
 }
 
@@ -407,4 +413,41 @@ footer .copyright {
 .btn-lg {
   font-size: 16px;
   padding: 25px 35px;
+}
+
+.sidebar{
+  width: 200px;
+  color: #818181;
+}
+.sidebar p, .sidebar li, .sidebar a{
+  font-family: "Hacker",monospace;
+  color: #818181;
+  margin: 0;
+}
+.sidebar .myname{
+  font-size: 20px;
+  z-index: 1;
+  overflow-x: hidden;
+  color: #818181;
+  font-weight:bold;
+}
+
+.avatar img{
+  border-radius: 50%;
+  width: 100%;
+  height: 100px;
+  width: 100px;
+  background-position: -25px -20px;
+  display: block;
+  padding: 5px;
+  border: 1px solid #696767;
+}
+.wrapper{
+  position: relative;
+}
+.description{
+  list-style-type: none;
+  padding-left: 0px;
+  font-size: .75em;
+  margin-top: 10px;
 }
