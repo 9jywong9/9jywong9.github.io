@@ -21,6 +21,7 @@ body {
 p {
   line-height: 1.5;
   margin: 30px 0;
+  color:#149414;
 }
 
 p a {
@@ -172,6 +173,12 @@ img::-moz-selection {
     /* if the user changes the scrolling direction, we show the header */
     transform: translate3d(0, 100%, 0);
   }
+}
+
+#main{
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 header.masthead {
